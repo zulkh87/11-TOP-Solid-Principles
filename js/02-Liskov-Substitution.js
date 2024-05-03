@@ -1,4 +1,10 @@
-class Rectangle {
+class Shape {
+  area() {
+    // functionality
+  }
+}
+
+class Rectangle extends Shape {
   constructor(width, height) {
     this.width = width;
     this.height = height;
@@ -17,7 +23,7 @@ class Rectangle {
   }
 }
 
-class Square extends Rectangle {
+class Square extends Shape {
   setWidth(width) {
     this.width = width;
     this.height = width;
@@ -31,7 +37,7 @@ class Square extends Rectangle {
 
 // This function breaks Liskov Substitution
 
-function increaseRectangleWidth(rectangle) {
+function increaseShapeWidth(rectangle) {
   rectangle.setWidth(rectangle.width + 1);
 }
 
