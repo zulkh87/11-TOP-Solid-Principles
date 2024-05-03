@@ -1,3 +1,5 @@
+import logMessage from "./00-logger.js";
+
 class CalorieTracker {
   constructor(maxCalories) {
     this.maxCalories = maxCalories;
