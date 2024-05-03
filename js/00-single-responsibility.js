@@ -9,16 +9,12 @@ class CalorieTracker {
   trackCalories(calorieCount) {
     this.currentCalories += calorieCount;
     if (this.currentCalories > this.maxCalories) {
-      this.logCalorieSurplus;
+      logMessage("Max calories exceeded");
     }
-  }
-
-  logCalorieSurplus() {
-    console.log("Max calories exceeded");
   }
 }
 
-// Calorie tracker violates S => single responsibility.
+// Calorie tracker does not violate single responsibility
 
 const calorieTracker = new CalorieTracker(2000);
 calorieTracker.trackCalories(500);
